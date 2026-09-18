@@ -1,0 +1,436 @@
+/* ================================================================
+   Experiences.module.css
+   Reference: slideshow section with bg #f0f0f0 (token-1273543a)
+   Cards: bg #f0f0f0, border-radius:20px, border:1px solid rgba(26,26,26,0.1)
+   ================================================================ */
+
+/* Outer section — same light bg as hero */
+.experiencesSection {
+  background-color: rgb(240, 240, 240); /* token-1273543a #f0f0f0 */
+  color: rgb(26, 26, 26);
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Marquee text area — large scrolling text */
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* Marquee track scrolls leftward */
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  padding-left: 40px;
+  will-change: transform;
+}
+
+/* Large text label — from reference: similar huge display text */
+.marqueeText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: clamp(60px, 12vw, 160px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: rgb(26, 26, 26);
+  white-space: nowrap;
+}
+
+/* Asterisk/star SVG used as separator in marquee */
+.asterisk {
+  width: 80px;
+  height: 80px;
+  color: rgba(26, 26, 26, 0.15);
+  animation: spin 20s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Header row — description text centered */
+.header {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+/* Description text — preset ull0yy: 16px, weight 300, line-height 1.5 */
+.description {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: rgb(26, 26, 26);
+  text-align: center;
+  max-width: 480px;
+}
+
+/* Prev/Next nav buttons */
+.navButtons {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+}
+
+/* Each button — dark bg circle */
+.navBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgb(26, 26, 26);
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.navBtn:hover {
+  opacity: 0.8;
+}
+
+/* Carousel outer — clips horizontally */
+.carouselContainer {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 40px 80px;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Inline flex track of cards */
+.carouselTrack {
+  display: inline-flex;
+  gap: 16px;
+  padding-right: 40px;
+}
+
+/* Individual experience card —
+   bg: #f0f0f0, border-radius:20px, border: 1px solid rgba(26,26,26,0.1) */
+.card {
+  width: 380px;
+  min-width: 380px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 20px;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  transition: opacity 0.2s ease;
+}
+
+.card:hover {
+  opacity: 0.85;
+}
+
+/* Card header row — avatar + company logo */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 24px 0;
+}
+
+/* Avatar circle */
+.avatarWrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  flex-shrink: 0;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Company logo pill */
+.logoWrapper {
+  background: transparent;
+  height: auto;
+  display: flex;
+  align-items: center;
+  filter: invert(1);
+  opacity: 0.67;
+}
+
+.companyLogo {
+  height: 20px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Main content area — screenshot/preview image */
+.cardImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* Quote / testimonial text area */
+.quoteIcon {
+  color: rgba(26, 26, 26, 0.2);
+  padding: 20px 24px 0;
+}
+
+.quoteText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: rgb(26, 26, 26);
+  padding: 12px 24px 24px;
+  flex: 1;
+}
+
+/* Card footer — author name + role */
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 24px 24px;
+}
+
+.name {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgb(26, 26, 26);
+}
+
+.role {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.5);
+}
+
+@media (max-width: 809.98px) {
+  .carouselContainer {
+    padding: 0 20px 60px;
+  }
+  .card {
+    width: 300px;
+    min-width: 300px;
+  }
+}
+
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  padding-left: 40px;
+}
+
+.marqueeText {
+  font-size: 180px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.asterisk {
+  width: 120px;
+  height: 120px;
+  color: rgba(17, 17, 17, 0.1); /* light grey */
+  animation: spin 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* rough estimate */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto 60px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, 0.7);
+  text-align: center;
+  max-width: 480px;
+}
+
+.navButtons {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  right: 48px;
+  bottom: 0;
+}
+
+.navBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navBtn:hover {
+  background: #333333;
+}
+
+.carouselContainer {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 0 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carouselTrack {
+  display: inline-flex;
+  gap: 24px;
+  padding-right: 48px; /* space at end */
+}
+
+.card {
+  width: 320px;
+  min-width: 320px;
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(17, 17, 17, 0.03);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.avatarWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logoWrapper {
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 100px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(17, 17, 17, 0.05);
+}
+
+.companyLogo {
+  height: 16px;
+  object-fit: contain;
+}
+
+.quoteIcon {
+  color: rgba(17, 17, 17, 0.2);
+  margin-bottom: 16px;
+}
+
+.quoteText {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #111111;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.role {
+  font-size: 12px;
+  color: rgba(17, 17, 17, 0.5);
+}

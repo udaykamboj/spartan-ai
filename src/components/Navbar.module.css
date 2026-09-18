@@ -1,0 +1,181 @@
+/* ================================================================
+   Navbar.module.css
+   Matches .framer-TFhzF / framer-1fa40hx nav from reference:
+   - Position: fixed, centered, top 24px
+   - bg: white, border: 1px solid rgba(26,26,26,0.1), border-radius: 100px
+   - Inner: pill shape, gap between logo+links and CTA
+   ================================================================ */
+
+/* Outer fixed wrapper — positions the pill bar */
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  pointer-events: none; /* let clicks pass through empty space */
+}
+
+/* Pill container — bg:white, border, radius:100px (from reference inline style) */
+/* border: 1px solid rgba(26,26,26,0.1) = var(--color-dark-10) */
+.navInner {
+  pointer-events: all;
+  display: flex;
+  flex-flow: row;
+  place-content: center space-between;
+  align-items: center;
+  gap: 0;
+  background-color: #ffffff;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 100px;
+  padding: 6px 6px 6px 24px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+}
+
+/* Left group: logo + nav links */
+.navLeft {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 38px; /* framer-15p7md2: gap:38px, padding: 0 29px */
+}
+
+/* Logo link — framer-bgd74x: height:34px, width:60px */
+.navLogo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 34px;
+  color: #000000;
+}
+
+/* Links row — framer-1gkesmg: flex-flow row, gap 0 */
+.navLinks {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0;
+}
+
+/* Individual link — framer-1tb5lby: padding 7px 16px, gap 10px */
+/* Text preset g3iomj: font 14px, weight 400, color inherited, opacity 0.65 on non-active */
+.navLink {
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  text-decoration: none;
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5em;
+  color: rgb(26, 26, 26);
+  opacity: 0.65;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.navLink.active {
+  opacity: 1;
+}
+
+/* CTA "Hire Team" button — framer-vm9ze Secondary small variant from reference:
+   bg: white, border: 1px solid rgba(26,26,26,0.1), border-radius: 12px
+   padding: 3px 3px 3px 3px (tight), contains icon box + text */
+.navCta {
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 3px 3px 3px 3px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  height: min-content;
+  overflow: clip;
+  position: relative;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.navCta:hover {
+  background-color: rgba(26, 26, 26, 0.03);
+}
+
+/* Icon box inside CTA — dark bg, rounded */
+/* bg: rgb(31,31,31), border-radius: 10px, 40x36 (secondary small variant) */
+.navCtaIcon {
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(31, 31, 31);
+  border-radius: 10px;
+  width: 40px;
+  height: 36px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+/* Text in CTA — preset g3iomj: 14px, color #1a1a1a */
+.navCtaText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5em;
+  color: rgb(26, 26, 26);
+  white-space: pre;
+  padding: 0 16px 0 0;
+  flex: none;
+}
+
+/* Mobile hamburger (hidden on desktop) */
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 809.98px) {
+  .navbar {
+    top: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(31, 31, 31);
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  .navbar {
+    max-width: 900px;
+  }
+}

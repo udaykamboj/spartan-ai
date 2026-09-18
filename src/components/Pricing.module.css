@@ -1,0 +1,757 @@
+/* ================================================================
+   Pricing.module.css
+   Reference: section bg #f0f0f0 (token-1273543a)
+   Text: rgb(26,26,26), border: rgba(26,26,26,0.1)
+   Dark card: bg #1a1a1a (token-2ddcea38)
+   ================================================================ */
+
+/* Outer section */
+.pricingSection {
+  background-color: rgb(240, 240, 240); /* token-1273543a */
+  color: rgb(26, 26, 26);
+  padding: 80px 0 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Large scrolling marquee — at top and bottom */
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  padding-left: 40px;
+  will-change: transform;
+}
+
+/* Large type in marquee */
+.marqueeText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: clamp(80px, 14vw, 180px);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: rgb(26, 26, 26);
+  white-space: nowrap;
+}
+
+/* Rotating asterisk */
+.asterisk {
+  width: 100px;
+  height: 100px;
+  color: rgba(26, 26, 26, 0.1);
+  animation: spin 20s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Header area with toggle */
+.header {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* "Monthly" / "Annual" label */
+.toggleLabel {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.toggleLabel.active {
+  color: rgb(26, 26, 26);
+}
+
+/* "Save 20%" badge */
+.badge {
+  font-family: 'Geist Mono', monospace;
+  font-size: 11px;
+  color: rgba(26, 26, 26, 0.4);
+}
+
+/* Toggle switch */
+.toggleBtn {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: rgba(26, 26, 26, 0.15);
+  border: none;
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+  transition: background 0.3s ease;
+}
+
+.toggleBtn.toggled {
+  background: rgb(26, 26, 26);
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.toggleBtn.toggled .toggleThumb {
+  transform: translateX(20px);
+}
+
+/* Description text */
+.description {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  color: rgba(26, 26, 26, 0.7);
+  max-width: 480px;
+}
+
+/* 4-column pricing grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1200px;
+  margin: 0 auto 120px;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+/* Pricing card */
+.card {
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(26, 26, 26, 0.1);
+  background: transparent;
+  color: rgb(26, 26, 26);
+  transition: background 0.3s ease;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+/* Dark highlight card */
+.darkCard {
+  background: rgb(26, 26, 26); /* token-2ddcea38 */
+  color: #ffffff;
+}
+
+/* Card top section — plan name + price */
+.cardTop {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  margin-bottom: 32px;
+}
+
+.darkCard .cardTop {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.planName {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.currency {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.price {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.period {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.5);
+  margin-top: auto;
+  margin-bottom: 8px;
+  align-self: flex-end;
+}
+
+.darkCard .period {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.billedText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.5);
+}
+
+.darkCard .billedText {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Card middle — description + CTA */
+.cardMiddle {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.darkCard .cardMiddle {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.planDesc {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: rgba(26, 26, 26, 0.7);
+  margin-bottom: 24px;
+}
+
+.darkCard .planDesc {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* CTA button — framer-vm9ze style: pill with icon box */
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 3px 16px 3px 3px;
+  background: rgb(26, 26, 26);
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.darkCard .btnSecondary {
+  background: #ffffff;
+  color: rgb(26, 26, 26);
+}
+
+.btnSecondary:hover {
+  opacity: 0.85;
+}
+
+.btnIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.darkCard .btnIcon {
+  background: rgba(26, 26, 26, 0.15);
+}
+
+.btnText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+/* Features list */
+.cardBottom {
+  margin-bottom: 0;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featureItem {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(26, 26, 26, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.darkCard .featureItem {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Bottom marquee strip */
+.lowerMarqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 24px 0;
+  border-top: 1px solid rgba(26, 26, 26, 0.1);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.lowerMarqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee 40s linear infinite;
+  padding-left: 40px;
+}
+
+/* "Spartan" badge in bottom marquee */
+.spartanBadge {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 2px solid rgb(26, 26, 26);
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.lowerMarqueeText {
+  font-family: 'Inter Display', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(26, 26, 26);
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card:nth-child(2) {
+    border-right: none;
+  }
+  .card:nth-child(1),
+  .card:nth-child(2) {
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  }
+}
+
+@media (max-width: 809.98px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    border-right: none;
+    border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  }
+  .header {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 20px;
+  }
+  .marqueeText {
+    font-size: clamp(60px, 18vw, 100px);
+  }
+}
+
+
+.marqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+.marqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee 30s linear infinite;
+  padding-left: 40px;
+}
+
+.marqueeText {
+  font-size: 180px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.asterisk {
+  width: 120px;
+  height: 120px;
+  color: rgba(17, 17, 17, 0.1);
+  animation: spin 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header {
+  max-width: 1440px;
+  margin: 0 auto 80px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggleLabel {
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.4);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.toggleLabel.active {
+  color: #111111;
+}
+
+.badge {
+  font-size: 12px;
+  color: rgba(17, 17, 17, 0.4);
+  font-family: var(--font-mono);
+}
+
+.toggleBtn {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #e0e0e0;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  padding: 2px;
+  transition: background 0.3s ease;
+}
+
+.toggleBtn.toggled {
+  background: #111111;
+}
+
+.toggleThumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.toggleBtn.toggled .toggleThumb {
+  transform: translateX(20px);
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(17, 17, 17, 0.7);
+  max-width: 480px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1440px;
+  margin: 0 auto 120px;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.card {
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(17, 17, 17, 0.1);
+  background: transparent;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card:last-child {
+  border-right: none;
+}
+
+.darkCard {
+  background: #111111;
+  color: #ffffff;
+}
+
+.cardTop {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  margin-bottom: 32px;
+}
+
+.darkCard .cardTop {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.planName {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.priceWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.currency {
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+.price {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.period {
+  font-size: 16px;
+  color: rgba(17, 17, 17, 0.5);
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.darkCard .period {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.billedText {
+  font-size: 12px;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.darkCard .billedText {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cardMiddle {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  margin-bottom: 32px;
+  flex: 1;
+}
+
+.darkCard .cardMiddle {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.planDesc {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  color: rgba(17, 17, 17, 0.8);
+}
+
+.darkCard .planDesc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 24px 8px 8px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.darkCard .btnSecondary {
+  background: #ffffff;
+  color: #111111;
+}
+
+.btnSecondary:hover {
+  transform: scale(1.02);
+}
+
+.btnIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.darkCard .btnIcon {
+  background: rgba(17, 17, 17, 0.1);
+}
+
+.cardBottom {
+  margin-bottom: 16px;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.featureItem {
+  font-size: 14px;
+  color: rgba(17, 17, 17, 0.5);
+}
+
+.darkCard .featureItem {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.lowerMarqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  padding: 24px 0;
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.lowerMarqueeTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: marquee-left 40s linear infinite;
+  padding-left: 40px;
+}
+
+.spartanBadge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 2px solid #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerMarqueeText {
+  font-size: 14px;
+  color: #111111;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card:nth-child(2) {
+    border-right: none;
+  }
+  .card:nth-child(1), .card:nth-child(2) {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    border-right: none;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+  }
+  .header {
+    flex-direction: column;
+    gap: 32px;
+  }
+}

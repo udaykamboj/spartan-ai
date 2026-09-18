@@ -1,0 +1,629 @@
+/* =============================================================
+   Hero.module.css — 1:1 match of spartanai.framer.website hero
+   All values sourced directly from the SnipCSS export.
+   ============================================================= */
+
+/* ── .framer-hmw7d8 ────────────────────────────────────────── */
+.root {
+  background-color: #ffffff;
+  height: 100vh;
+  overflow: clip;
+  z-index: 4;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* ── .framer-1w8qob2 ────────────────────────────────────────── */
+.inner {
+  background-color: #f0f0f0;
+  height: 100%;
+  overflow: clip;
+  border-radius: 20px;
+  flex-flow: row;
+  flex: 1 0 0;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 26px;
+  width: 1px;
+  padding: 190px 0 160px;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-1g8n9hz ────────────────────────────────────────── */
+.contentRow {
+  height: min-content;
+  overflow: clip;
+  flex-flow: row;
+  flex: 1 0 0;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 1px;
+  padding: 0 40px;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-1v63p98 ────────────────────────────────────────── */
+.leftCol {
+  height: min-content;
+  overflow: clip;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 26px;
+  width: 1px;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-vsdi6k ─────────────────────────────────────────── */
+.textStack {
+  height: min-content;
+  overflow: clip;
+  z-index: 4;
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-o1dxza ─────────────────────────────────────────── */
+.h1Wrapper {
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+}
+
+/* ── h1 preset .framer-styles-preset-1e6stfs ────────────────── */
+.headline {
+  font-family: "Inter", sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.1em;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  /* Inter Display via optical sizing axis */
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 32;
+}
+
+/* "Scale your ideas." — token-d3bc1994 = rgba(26,26,26,0.4) */
+.headlineMuted {
+  color: rgba(26, 26, 26, 0.4);
+}
+
+/* " Build with AI." — token-2ddcea38 = rgb(26,26,26) */
+.headlineDark {
+  color: rgb(26, 26, 26);
+}
+
+/* ── .framer-ifhldj ─────────────────────────────────────────── */
+.subtitleWrapper {
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  position: relative;
+}
+
+/* ── p preset .framer-styles-preset-ull0yy ──────────────────── */
+/* Inline style override: color = token-2ddcea38 = rgb(26,26,26) */
+.subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5em;
+  text-align: left;
+  color: rgb(26, 26, 26);
+  margin: 0;
+  padding: 0;
+}
+
+/* ── .framer-1epupqn-container ──────────────────────────────── */
+.ctaContainer {
+  z-index: 4;
+  flex: none;
+  width: 200px;
+  height: auto;
+  position: relative;
+}
+
+/* ── .framer-vm9ze.framer-1wpq3gf + style-ZIjBS ─────────────── */
+.ctaButton {
+  /* style-ZIjBS: bg rgb(31,31,31), border-radius 16px */
+  background-color: rgb(31, 31, 31);
+  border-radius: 16px;
+  width: 100%; /* fills ctaContainer width */
+  /* .framer-1wpq3gf: */
+  cursor: pointer;
+  height: min-content;
+  overflow: clip;
+  flex-flow: row;
+  place-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 3px 24px 3px 3px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-1emdssz + style-LSy8k ─────────────────────────── */
+.ctaIconBox {
+  /* style-LSy8k: bg white, border-radius 14px */
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
+  /* .framer-1emdssz: */
+  height: 59px;
+  overflow: clip;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 65px;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-yk1t5j + style-C7xlr ──────────────────────────── */
+.ctaTextBox {
+  /* style-C7xlr: border-radius 14px */
+  border-radius: 14px;
+  /* .framer-yk1t5j: */
+  height: 59px;
+  overflow: clip;
+  flex-flow: row;
+  flex: 1 0 0;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 1px;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* ── p preset style-vad88t ──────────────────────────────────── */
+.ctaText {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 1.5em;
+  text-align: start;
+  color: rgb(255, 255, 255);
+  /* white-space: pre to match framer-1xuhufw */
+  white-space: pre;
+  flex: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── .framer-amm35g-container + card ───────────────────────── */
+/* Container: flex: 1 0 0, max-width: 320px, z-index: 5 */
+/* Card (style-Cgnde): bg #1a1a1a, border-radius: 24px, border: 1px solid rgba(31,31,31,0.1) */
+.productCard {
+  /* container properties */
+  z-index: 5;
+  flex: 1 0 0;
+  width: 1px;
+  max-width: 320px;
+  height: auto;
+  /* card properties */
+  cursor: pointer;
+  overflow: clip;
+  flex-flow: column;
+  place-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 6px;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  background-color: rgb(26, 26, 26);
+  border-radius: 24px;
+  border: 1px solid rgba(31, 31, 31, 0.1);
+  box-sizing: border-box;
+}
+
+/* ── .framer-1hdq3d6 + style-7jGgl ─────────────────────────── */
+.cardMediaWrapper {
+  /* style-7jGgl: bg white, border-radius 20px */
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  /* .framer-1hdq3d6: */
+  height: 220px;
+  overflow: clip;
+  z-index: 3;
+  flex: none;
+  width: 100%;
+  position: relative;
+}
+
+/* ── video style-ZECnt ──────────────────────────────────────── */
+.cardVideo {
+  cursor: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  display: block;
+  object-fit: cover;
+  background-color: rgba(0, 0, 0, 0);
+  object-position: 50% 50%;
+}
+
+/* ── .framer-1ni9jnm (style-fZbmz) ─────────────────────────── */
+.cardFooter {
+  height: min-content;
+  overflow: clip;
+  z-index: 3;
+  flex-flow: row;
+  flex: none;
+  place-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px;
+  display: flex;
+  position: relative;
+}
+
+/* ── .framer-1tcmxgl (style-m3DH1) ─────────────────────────── */
+.cardFooterText {
+  height: min-content;
+  overflow: clip;
+  flex-flow: column;
+  flex: 1 0 0;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 5px;
+  width: 1px;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+/* ── "Digital Brain" — style-Bpy1V ─────────────────────────── */
+.cardTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4em;
+  text-align: left;
+  color: rgb(31, 31, 31);
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── "// Model v4.0.2" — preset style-16efy98 ───────────────── */
+.cardVersion {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.4em;
+  text-align: left;
+  /* token-12bdb585 = #1a1a1ab3 = rgba(26,26,26,0.7) */
+  color: rgba(26, 26, 26, 0.7);
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Arrow icon container (.framer-1xwwq0h-container) ───────── */
+/* position: absolute, top: calc(49.2958% - 13px), right: 24px */
+.cardArrow {
+  z-index: 1;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: calc(49.2958% - 13px);
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── .framer-d7tyka — blurry card background overlay ────────── */
+.cardBgOverlay {
+  overflow: clip;
+  z-index: 2;
+  flex: none;
+  position: absolute;
+  inset: 0;
+}
+
+.cardBgImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center;
+  object-fit: cover;
+}
+
+/* ── .framer-ksfjr4 (bottom bar) ────────────────────────────── */
+.bottomBar {
+  height: min-content;
+  overflow: clip;
+  z-index: 3;
+  flex-flow: column;
+  flex: none;
+  place-content: flex-start center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0 40px 50px;
+  display: flex;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+}
+
+/* ── Stats text (.framer-qcg9jg) — preset g3iomj ─────────────── */
+/* inline style overrides color to white (token-7bbf4f4d = #fff) */
+.statsText {
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.4em;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  white-space: pre-wrap;
+  word-break: break-word;
+  word-wrap: break-word;
+  flex: none;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── .framer-15vldg4 (ticker outer) ─────────────────────────── */
+.tickerOuter {
+  filter: invert(0);
+  height: min-content;
+  overflow: clip;
+  overflow-x: clip;
+  border-radius: 10px;
+  flex-flow: row;
+  flex: none;
+  place-content: center flex-start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  position: relative;
+  -webkit-mask: linear-gradient(90deg, #0000 0%, #000 8.03421% 92.0098%, #0000 100%);
+  mask: linear-gradient(90deg, #0000 0%, #000 8.03421% 92.0098%, #0000 100%);
+}
+
+/* ── Ticker list (#style-KTkzJ) ─────────────────────────────── */
+.tickerList {
+  display: flex;
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  /* animate — translateX by 1/3 of 3× logos = 1 set of 5 */
+  animation: ticker 20s linear infinite;
+  will-change: transform;
+}
+
+.tickerItem {
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+
+/* ── Logo frame (.framer-11nj948 etc.) ──────────────────────── */
+/* aspect-ratio: 3.31373, width: 189px */
+.logoFrame {
+  aspect-ratio: 3.31373;
+  flex: none;
+  width: 189px;
+  height: auto;
+  position: relative;
+  overflow: visible;
+}
+
+.logoImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center;
+  object-fit: cover;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+
+/* ── .framer-1ulft50 (bg image wrapper) ─────────────────────── */
+/* position: absolute; inset: 0 0 -10px → extends 10px below */
+.bgWrapper {
+  overflow: clip;
+  z-index: 1;
+  flex: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -10px;
+  left: 0;
+}
+
+/* Background landscape image — fills bgWrapper */
+.bgImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-position: center;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* ── .framer-1entcjc (blur + dark gradient container) ─────────── */
+/*
+ * background: linear-gradient(180deg, rgba(31,31,31,0) 0%, rgba(31,31,31,0.6) 100%)
+ * height: 405px
+ * position: absolute; bottom: 0; left: 0; right: 0
+ */
+.blurContainer {
+  background: linear-gradient(180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 100%);
+  height: 405px;
+  overflow: clip;
+  flex: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* 8-layer progressive backdrop blur — exact values from SnipCSS */
+.blur1 {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  backdrop-filter: blur(0.0390625px);
+  -webkit-backdrop-filter: blur(0.0390625px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 37.5%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 37.5%);
+}
+.blur2 {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  backdrop-filter: blur(0.078125px);
+  -webkit-backdrop-filter: blur(0.078125px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,0) 50%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,0) 50%);
+}
+.blur3 {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  backdrop-filter: blur(0.15625px);
+  -webkit-backdrop-filter: blur(0.15625px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 62.5%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 62.5%);
+}
+.blur4 {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  backdrop-filter: blur(0.3125px);
+  -webkit-backdrop-filter: blur(0.3125px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,0) 75%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,0) 75%);
+}
+.blur5 {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  backdrop-filter: blur(0.625px);
+  -webkit-backdrop-filter: blur(0.625px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 87.5%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 87.5%);
+}
+.blur6 {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  backdrop-filter: blur(1.25px);
+  -webkit-backdrop-filter: blur(1.25px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%);
+}
+.blur7 {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 112.5%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%, rgba(0,0,0,0) 112.5%);
+}
+.blur8 {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 87.5%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 112.5%, rgba(0,0,0,0) 125%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 87.5%, rgba(0,0,0,1) 100%, rgba(0,0,0,1) 112.5%, rgba(0,0,0,0) 125%);
+}
