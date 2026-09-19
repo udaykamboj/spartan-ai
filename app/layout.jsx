@@ -1,6 +1,7 @@
 import "./globals.css";
 import SvgSprite from "@/components/SvgSprite";
-import ClientRuntime from "@/components/ClientRuntime";
+import AppearScripts from "@/components/runtime/AppearScripts";
+import SiteRuntime from "@/components/runtime/SiteRuntime";
 
 export const metadata = {
   metadataBase: new URL("https://spartanai.com"),
@@ -32,13 +33,12 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="ltr">
       <head>
         <link rel="stylesheet" href="/site.css" />
-        <link href="https://fonts.gstatic.com/" rel="preconnect" crossOrigin="" />
-        <script src="/framer-appear-runtime.js" defer></script>
       </head>
       <body>
-        <SvgSprite />
         {children}
-        <ClientRuntime />
+        <SvgSprite />
+        <AppearScripts />
+        <SiteRuntime />
       </body>
     </html>
   );
